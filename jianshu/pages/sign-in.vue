@@ -15,7 +15,7 @@
                         登录
                     </nuxt-link>
                     <b>.</b>
-                    <nuxt-link class="" to="/sign-up">
+                    <nuxt-link to="/sign-up">
                         注册
                     </nuxt-link>
                 </h4>
@@ -39,7 +39,7 @@
                 </div>                
                  <nuxt-link class="help" to="/">登录遇到问题?</nuxt-link>
 
-                  <button>登录</button>
+                  <button class="sign-in-btn" >登录</button>
 
               </form>
 
@@ -51,17 +51,17 @@
                 <ul class="">
                     <li>
                         <nuxt-link to="/">
-                            <i class="fa fa-weixin"></i>
+                            <i class="weixin fa fa-weixin"></i>
                         </nuxt-link>
                     </li>
                     <li>
                         <nuxt-link to="/">
-                            <i class="fa fa-weibo"></i>
+                            <i class="weibo fa fa-weibo"></i>
                         </nuxt-link>
                     </li>
                     <li>
                         <nuxt-link to="/">
-                            <i class="fa fa-qq"></i>
+                            <i class="qq fa fa-qq"></i>
                         </nuxt-link>
                     </li>
                 </ul>
@@ -85,7 +85,11 @@ export default {
       { name: "author", content: "戴亮" }
     ]
   },
-  data() {}
+  data() {
+      return{
+          
+      }
+  }
 };
 </script>
 
