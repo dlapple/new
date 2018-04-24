@@ -178,35 +178,142 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="#" class="load-more">阅读更多</a>
+                       
                     </div>
+                     <a href="#" class="load-more">阅读更多</a>
                 </div>
                 <div class="col-xs-offset-1 col-xs-7 aside">
-                    侧边栏
+                    <div class="row">
+                        <div class="board">
+                        <nuxt-link to="/">
+                            <img src="../assets/img/ad1.png">
+                        </nuxt-link>
+                         <nuxt-link to="/">
+                            <img src="../assets/img/ad2.png">
+                        </nuxt-link>
+                         <nuxt-link to="/">
+                            <img src="../assets/img/ad3.png">
+                        </nuxt-link>
+                         <nuxt-link to="/">
+                            <img src="../assets/img/ad4.png">
+                        </nuxt-link>
+                        </div>
+                        <!-- 推荐作者 -->
+                        <div class="recommended-author">
+                            <div class="title">
+                                <span>推荐作者</span>
+                                <nuxt-link class="page-change" to="/">
+                                    <i class="fa fa-refresh"></i>
+                                    换一批
+                                </nuxt-link>
+                            </div>
+                            <ul class="recommended-list">
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="../assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>
+                                        写了1958k字·1.9k喜欢
+                                    </p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="../assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>
+                                        写了1958k字·1.9k喜欢
+                                    </p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="../assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>
+                                        写了1958k字·1.9k喜欢
+                                    </p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="../assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>
+                                        写了1958k字·1.9k喜欢
+                                    </p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="../assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>
+                                        写了1958k字·1.9k喜欢
+                                    </p>
+                                </li>
+                            </ul>
+                            <nuxt-link to="/" class="find-more">
+                                查看更多
+                                <i class="fa fa-angle-right"></i>
+                            </nuxt-link>
+</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script>
-    import myHeader from  '../components/myHeader'
-    export default {
-        head:{
-            title:'简书-创作你的创作',
-            meta:[
-                {charset:'utf-8'},
-                {name:'keywords',content:'简书首页'},
-                {name:'description',content:'简书首页'},
-                {name:'author',content:'dl'}
-            ]
-        },
-        components:{
-            myHeader
-        },
-        data () {
-            return {
-                name:'首页'
-            }
-        }
-    }
+import myHeader from "../components/myHeader";
+export default {
+  head: {
+    title: "简书-创作你的创作",
+    meta: [
+      { charset: "utf-8" },
+      { name: "keywords", content: "简书首页" },
+      { name: "description", content: "简书首页" },
+      { name: "author", content: "dl" }
+    ]
+  },
+  components: {
+    myHeader
+  },
+  data() {
+    return {
+      name: "首页"
+    };
+  }
+};
 </script>
