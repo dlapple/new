@@ -202,8 +202,8 @@
                         <div class="recommended-author">
                             <div class="title">
                                 <span>推荐作者</span>
-                                <nuxt-link class="page-change" to="/">
-                                    <i class="fa fa-refresh"></i>
+                                <nuxt-link class="page-change" to="/">                              
+                                   <i :class="[f?'fa fa-refresh bb':'fa fa-refresh aa']" v-on:click="f=!f"></i>
                                     换一批
                                 </nuxt-link>
                             </div>
@@ -212,9 +212,48 @@
                                     <nuxt-link class="avatar" to="/u/123">
                                         <img src="../assets/img/default-avatar.jpg">
                                     </nuxt-link>
-                                    <a href="#" class="follow">
+                                    <a href="#" class="follow" @click="follow()">
+                                        <i class="fa fa-plus" id="i"></i>
+                                        <span class="san">关注</span>
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>
+                                        写了1958k字·1.9k喜欢
+                                    </p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="../assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow" v-show="show" @click="show==true?show=false:show=true">
                                         <i class="fa fa-plus"></i>
                                         关注
+                                    </a>
+                                    <a href="#" class="follow" v-show="!show" @click="show==true?show=false:show=true" id="show" >
+                                        <i class="fa fa-check"></i>
+                                        已关注
+                                    </a>
+                                   
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>
+                                        写了1958k字·1.9k喜欢
+                                    </p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="../assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow" v-show="show1" @click="show1==true?show1=false:show1=true">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <a href="#" class="follow" v-show="!show1" @click="show1==true?show1=false:show1=true" id="show" >
+                                        <i class="fa fa-check"></i>
+                                        已关注
                                     </a>
                                     <nuxt-link to="/u/123" class="name">
                                         简书用户
@@ -242,39 +281,9 @@
                                     <nuxt-link class="avatar" to="/u/123">
                                         <img src="../assets/img/default-avatar.jpg">
                                     </nuxt-link>
-                                    <a href="#" class="follow">
-                                        <i class="fa fa-plus"></i>
-                                        关注
-                                    </a>
-                                    <nuxt-link to="/u/123" class="name">
-                                        简书用户
-                                    </nuxt-link>
-                                    <p>
-                                        写了1958k字·1.9k喜欢
-                                    </p>
-                                </li>
-                                <li>
-                                    <nuxt-link class="avatar" to="/u/123">
-                                        <img src="../assets/img/default-avatar.jpg">
-                                    </nuxt-link>
-                                    <a href="#" class="follow">
-                                        <i class="fa fa-plus"></i>
-                                        关注
-                                    </a>
-                                    <nuxt-link to="/u/123" class="name">
-                                        简书用户
-                                    </nuxt-link>
-                                    <p>
-                                        写了1958k字·1.9k喜欢
-                                    </p>
-                                </li>
-                                <li>
-                                    <nuxt-link class="avatar" to="/u/123">
-                                        <img src="../assets/img/default-avatar.jpg">
-                                    </nuxt-link>
-                                    <a href="#" class="follow">
-                                        <i class="fa fa-plus"></i>
-                                        关注
+                                    <a href="#" :class="'follow'" @click="a=!a" @mouseover="b=!b" @mouseout="b=!b">
+                                        <i :class="[a?'fa fa-plus':b?'fa fa-check':'fa fa-close']"></i>
+                                        {{a?'关注':b?'已关注':'取消关注'}}
                                     </a>
                                     <nuxt-link to="/u/123" class="name">
                                         简书用户
@@ -312,8 +321,24 @@ export default {
   },
   data() {
     return {
-      name: "首页"
+      name: "首页",
+      f:true,
+      show: true,
+      show1: true,
+      a:true,
+      b:false,
     };
+  },
+  methods: {
+    follow: function() {
+      console.log("xxxxx");
+      var follow1 = document.querySelector(".follow");
+      var san = document.querySelector(".san");
+      var plus = document.querySelector('#i')
+      san.innerText=='关注'?san.innerText='已关注':san.innerText='关注';
+      plus.className='fa fa-check'
+      
+    }
   }
 };
 </script>
